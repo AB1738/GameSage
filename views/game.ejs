@@ -15,9 +15,11 @@
     <h1 id="game-name"><%= game.name %></h1>
     <img src="<%= cover %>" alt="cover art for <%= game.name %>" id="cover">
     <p class="description"><%= game.summary %></p>
-    <% if(game.rating||game.total_rating){ %>
-    <p id="rating">Rating: <%= game.rating.toFixed(2)||game.total_rating.toFixed(2) %></p>
-    <% } %>
+    <p id="rating">
+        Rating: 
+        <%= (game.rating && !isNaN(game.rating)) ? game.rating.toFixed(2) : (game.total_rating && !isNaN(game.total_rating)) ? game.total_rating.toFixed(2) : 'N/A' %>
+    </p>
+    
     <a href="<%= game.url %>"><p>Click Here For More Information</p></a>
 </div>
 <a href="/genres"><button id="return-btn">Back To Genres</button></a>

@@ -2,21 +2,21 @@ body{
     height: 100vh;
     width: 100%;
     margin: 0;
+    background: linear-gradient(0deg, #ff7e5f, #feb47b); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .container{
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg, #ff7e5f, #feb47b); 
 }
 
 .content-wrapper{
-    height: 400px;
-    width: 300px;
+    min-height: fit-content;
+    width: 350px;
     background: linear-gradient(0deg, #f5e7ff, #b74bef); 
-    border: 1px solid black;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -26,18 +26,52 @@ body{
     text-align: center;
     font-size: 1.2rem;
     line-height: 1.5rem;
+    margin: 25px 0 25px 0;
+    opacity: 0; 
+    animation: .75s ease-in-out .25s slide-down,
+    glow 2s infinite ease-in-out ;
+    animation-fill-mode: forwards;
 }
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0; 
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #9b4de1  , 0 0 10px #9b4de1  , 0 0 15px #9b4de1  ;
+    }
+    50% {
+      box-shadow: 0 0 20px #f174be, 0 0 30px #b74bef, 0 0 40px #f174be;
+    }
+    100% {
+      box-shadow: 0 0 5px #b74bef , 0 0 10px #b74bef , 0 0 15px #b74bef ;
+    }
+  }
+
 .content-wrapper p{
     padding: 0 5px 0 5px;
 }
 .header{
     font-family: "Honk", serif;
-    font-size:2.2rem ;
-    /* color: hsl(350, 90%, 57%); */
+    font-size:2.8em ;
 }
 
 .description{
     font-family: "Jersey 15", serif;
+}
+
+img{
+    height: 45%;
+    width: 45%;
 }
 
 .genre-btn{
@@ -50,6 +84,7 @@ body{
     font-family: "Jersey 15", serif;
     background-color: hsl(12, 100%, 69%);
     color: white;
+    margin-bottom: 10px;
 }
 
 .genre-btn:hover{
