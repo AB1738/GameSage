@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Genres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/genres.css">
+</head>
+<body>
+    <div id="genre-section">
+    <h1 class="header">Choose A Genre!</h1>
+    <div class="genre-container">
+
+        <% for (genre of genres){ %>
+            <a href="/genres/<%= genre.id %>">
+            <div class="genre-content-wrapper">
+                <div class="card-front">
+                    <p><%= genre.name %></p>
+                </div>
+                <div class="card-back">
+                    <h3><%= genre.name %> Genre</h3>
+                    <% if(genreDetails[genre.slug]){ %>
+                    <p><%= genreDetails[genre.slug].description %></p>
+                    <p><strong>Popularity:</strong> <%= genreDetails[genre.slug].popularity %></p>
+                    <p><strong>Example Games:</strong> <%= genreDetails[genre.slug].exampleGames %></p>
+                    <% } %>
+                </div>
+            </div>
+        </a>
+            <% } %>
+        </div>
+    </div>
+
+</body>
+</html>

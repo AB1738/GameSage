@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Jersey+15&display=swap" rel="stylesheet">
+    <title>Random Game</title>
+</head>
+<body>
+ <div class="container">
+    <div class="game-wrapper">
+    <h1 id="game-name"><%= game.name %></h1>
+    <img src="<%= cover %>" alt="cover art for <%= game.name %>" id="cover">
+    <p class="description"><%= game.summary %></p>
+    <% if(game.rating||game.total_rating){ %>
+    <p id="rating">Rating: <%= game.rating.toFixed(2)||game.total_rating.toFixed(2) %></p>
+    <% } %>
+    <a href="<%= game.url %>"><p>Click Here For More Information</p></a>
+</div>
+<a href="/genres"><button id="return-btn">Back To Genres</button></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(0deg, #ff7e5f, #feb47b);
+    margin: 0;
+}
+.container{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-wrapper{
+    display: flex;
+    background: linear-gradient(0deg, #f5e7ff, #b74bef); 
+    font-family: "Jersey 15", serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    margin: 15px 0 15px;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+}
+#cover{
+    height: 60%;
+    width: 55%;
+}
+.description{
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+}
+#rating{
+    font-family: 1.2rem;
+}
+
+#return-btn{
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    font-size: 1.2rem;
+    height: 35px;
+    font-family: "Jersey 15", serif;
+    background-color: hsl(280, 84%, 62%);
+    color: white;
+    margin-bottom: 15px;
+}
+
+#return-btn:hover{
+    background-color: hsl(280, 84%, 52%);
+    box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.5);
+}
