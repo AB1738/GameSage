@@ -47,17 +47,38 @@ a{
     height: 250px;
     width: 20%;
     position: absolute;
-    border: 1px solid black;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Apply the shadow */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
     color: black;
     font-weight: bold;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
+    perspective: 1000px;
+    opacity: 0; 
+    animation: appear 1s ease-in 1 forwards; 
 }
-.genre-content-wrapper:hover{
+.genre-content-wrapper:hover .card-inner {
     transform: rotateY(180deg);
+  }
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease; 
 }
 
 
