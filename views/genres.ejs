@@ -12,30 +12,40 @@
 <body>
     <div id="particles-js"></div> 
     <div id="genre-section">
-    <h1 class="header">Choose A Genre!</h1>
-    <div class="genre-container">
-
-        <% for (genre of genres){ %>
+        <h1 class="header">Choose A Genre!</h1>
+        <div class="genre-container">
+      
+          <% for (genre of genres){ %>
             <a href="/genres/<%= genre.id %>">
-            <div class="genre-content-wrapper">
+              <div class="genre-content-wrapper">
                 <div class="card-inner">
-                <div class="card-front">
+                  <div class="card-front">
                     <p><%= genre.name %></p>
-                </div>
-                <div class="card-back">
+                  </div>
+                  <div class="card-back">
                     <h3><%= genre.name %> Genre</h3>
-                    <% if(genreDetails[genre.slug]){ %>
-                    <p><%= genreDetails[genre.slug].description %></p>
-                    <p><strong>Popularity:</strong> <%= genreDetails[genre.slug].popularity %></p>
-                    <p><strong>Example Games:</strong> <%= genreDetails[genre.slug].exampleGames %></p>
+                    
+                    <% 
+                      // Normalize genre.name to match the keys in genreDetails
+                      let normalizedName = genre.name
+                        .toLowerCase()  // Convert to lowercase for consistent matching
+                        .replace(/[\s\-()&/']+/g, '') // Remove spaces, hyphens, and parentheses
+                    %>
+      
+                    <% if(genreDetails[normalizedName]){ %>
+                      <p><%= genreDetails[normalizedName].description %></p>
+                      <p><strong>Example Games:</strong> <%= genreDetails[normalizedName].exampleGames %></p>
+                    <% } else { %>
+                      <p>No data found for this genre.</p>
                     <% } %>
+                  </div>
                 </div>
-             </div>
-            </div>
-        </a>
-            <% } %>
+              </div>
+            </a>
+          <% } %>
         </div>
-    </div>
+      </div>
+      
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
     particlesJS.load('particles-js', '/particles.json', function() {

@@ -49,7 +49,7 @@ a{
     position: absolute;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Apply the shadow */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
     color: black;
     font-weight: bold;
     perspective: 1000px;

@@ -6,6 +6,7 @@ const axios=require('axios')
 const ejsMate=require('ejs-mate')
 const PORT=3000
 require('dotenv').config()
+const genreDetails = require('./data/genreDetails'); 
 
 app.set('view engine', 'ejs') 
 app.engine('ejs',ejsMate)
@@ -225,36 +226,6 @@ const fetchGBGameCover=async(gameName)=>{
 app.get('/',(req,res)=>{
     res.render('home')
 })
-
-
-
-
-
-const genreDetails = {
-    action: {
-      description: "Action games focus on physical challenges, including hand–eye coordination and reaction-time.",
-      popularity: "Very High",
-      exampleGames: "Uncharted, Assassin's Creed"
-    },
-    adventure: {
-      description: "Adventure games are characterized by exploration and puzzle-solving.",
-      popularity: "Medium",
-      exampleGames: "The Legend of Zelda, Tomb Raider"
-    },
-    rolePlaying: {
-      description: "Role-playing games (RPGs) allow players to assume the roles of characters in a fictional setting.",
-      popularity: "High",
-      exampleGames: "The Witcher, Skyrim"
-    },
-    // Add other genres here...
-  };
-
-
-
-
-
-
-
 
 app.get('/genres',async(req,res,next)=>{
     try{
