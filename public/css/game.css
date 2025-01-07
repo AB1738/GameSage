@@ -33,6 +33,14 @@ body{
     animation: .75s ease-in-out .25s rotate,
     glow 2s infinite ease-in-out ;
     animation-fill-mode: forwards;
+    padding: 0 10px 0 10px;
+}
+
+@media(max-width:420px){
+    .game-wrapper{
+        width: 75%;
+    }
+
 }
 
 @keyframes rotate {

@@ -11,8 +11,10 @@ body{
 }
 .header{
     text-align: center;
-    font-size: 2rem;
-    animation: rotate 3s ease 2s infinite alternate-reverse;
+    font-size: 2.2rem;
+    animation: rotate 3s ease 2s infinite alternate;
+    color: #b74bef;
+    text-shadow: 3px 3px 3px hsl(280, 84%, 12%);
 }
 
 @keyframes rotate{
@@ -36,6 +38,7 @@ body{
     position: relative;
     font-size: 1.2rem;
 }
+
 a{
     height: 250px;
     width: 20%;
@@ -56,6 +59,39 @@ a{
     opacity: 0; 
     animation: appear 1s ease-in 1 forwards; 
 }
+@media(max-width:900px){
+    .genre-container{
+        font-size: 1rem;
+    }
+}
+@media(max-width:700px){
+    .genre-container{
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+       
+    }
+    .genre-content-wrapper{
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    a{
+        width: 33%;
+    }
+}
+
+@media(max-width:499px){
+    .genre-content-wrapper{
+        width: 40%;
+        font-size: .9rem;
+    }
+    a{
+        width: 40%;
+    }
+}
+
 .genre-content-wrapper:hover .card-inner {
     transform: rotateY(180deg);
   }

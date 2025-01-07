@@ -15,7 +15,7 @@ body{
 }
 
 .content-wrapper{
-    height: 50vh;
+    height: 75vh;
     min-height: fit-content;
     width: 350px;
     background: linear-gradient(0deg, #f5e7ff, #b74bef); 
@@ -34,6 +34,13 @@ body{
     glow 2s infinite ease-in-out ;
     animation-fill-mode: forwards;
 }
+@media(max-width:420px){
+    .content-wrapper{
+        width: 75%;
+    }
+
+}
+
 
 @keyframes slide-down {
     from {
@@ -72,8 +79,8 @@ body{
 }
 
 img{
-    height: 45%;
-    width: 45%;
+    height: 35%;
+    width: 35%;
 }
 
 .genre-btn{
