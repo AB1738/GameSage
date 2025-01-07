@@ -18,6 +18,7 @@
         <% for (genre of genres){ %>
             <a href="/genres/<%= genre.id %>">
             <div class="genre-content-wrapper">
+                <div class="card-inner">
                 <div class="card-front">
                     <p><%= genre.name %></p>
                 </div>
@@ -29,6 +30,7 @@
                     <p><strong>Example Games:</strong> <%= genreDetails[genre.slug].exampleGames %></p>
                     <% } %>
                 </div>
+             </div>
             </div>
         </a>
             <% } %>
