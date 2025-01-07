@@ -7,6 +7,7 @@ body{
     background-attachment: fixed;
 }
 .container{
+    min-height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -14,6 +15,7 @@ body{
 }
 
 .content-wrapper{
+    height: 50vh;
     min-height: fit-content;
     width: 350px;
     background: linear-gradient(0deg, #f5e7ff, #b74bef); 
@@ -26,7 +28,7 @@ body{
     text-align: center;
     font-size: 1.2rem;
     line-height: 1.5rem;
-    margin: 25px 0 25px 0;
+    /* margin: 25px 0 25px 0; */
     opacity: 0; 
     animation: .75s ease-in-out .25s slide-down,
     glow 2s infinite ease-in-out ;

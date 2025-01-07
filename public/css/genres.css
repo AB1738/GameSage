@@ -54,10 +54,25 @@ a{
     color: black;
     font-weight: bold;
     transform-style: preserve-3d;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
+    opacity: 0; 
+    animation: appear 1s ease-in 1 forwards; 
 }
 .genre-content-wrapper:hover{
     transform: rotateY(180deg);
+}
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
