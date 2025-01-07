@@ -11,6 +11,20 @@ body{
 }
 .header{
     text-align: center;
+    font-size: 2rem;
+    animation: rotate 3s ease 2s infinite alternate-reverse;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg); 
+    }
 }
 
 .genre-container{
@@ -60,6 +74,9 @@ a{
     flex-direction: column;
     font-size: 1.5rem;
 }
+.card-front p{
+    padding: 0 10px 0 10px;
+}
 .card-back{
     position: absolute;
     background: linear-gradient(0deg, #f5e7ff, #b74bef);
@@ -68,4 +85,13 @@ a{
     width: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+}
+
+#particles-js {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;  
+    height: 100vh;
+    z-index: -1;   
 }

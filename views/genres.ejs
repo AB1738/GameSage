@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/genres.css">
 </head>
 <body>
+    <div id="particles-js"></div> 
     <div id="genre-section">
     <h1 class="header">Choose A Genre!</h1>
     <div class="genre-container">
@@ -33,6 +34,12 @@
             <% } %>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+    particlesJS.load('particles-js', '/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
 
 </body>
 </html>

@@ -10,6 +10,7 @@
     <title>Random Game</title>
 </head>
 <body>
+ <div id="particles-js"></div> 
  <div class="container">
     <div class="game-wrapper">
     <h1 id="game-name"><%= game.name %></h1>
@@ -24,6 +25,12 @@
 </div>
 <a href="/genres"><button id="return-btn">Back To Genres</button></a>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', '/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
 
 </body>
 </html>
