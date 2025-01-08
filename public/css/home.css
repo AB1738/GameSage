@@ -13,6 +13,10 @@ body{
     justify-content: center;
     align-items: center;
 }
+.emoji{
+    font-size: 60px;
+}
+
 
 .content-wrapper{
     height: 75vh;
@@ -33,6 +37,7 @@ body{
     animation: .75s ease-in-out .25s slide-down,
     glow 2s infinite ease-in-out ;
     animation-fill-mode: forwards;
+    margin: 25px 0 25px 0;
 }
 @media(max-width:420px){
     .content-wrapper{
