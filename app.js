@@ -4,7 +4,7 @@ const session = require('express-session');
 const path=require('path')
 const axios=require('axios')
 const ejsMate=require('ejs-mate')
-const PORT=3000
+const PORT=process.env.PORT ||3000
 require('dotenv').config()
 
 const sessionMiddleware = require('./middleware/sessionMiddleware'); 
